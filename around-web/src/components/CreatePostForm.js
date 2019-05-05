@@ -11,7 +11,6 @@ class NormalCreatePostForm extends React.Component {
         }
         return e && e.fileList;
     }
-
     beforeUpload = () => false
 
     render() {
@@ -33,7 +32,10 @@ class NormalCreatePostForm extends React.Component {
                         <Input placeholder="Please input your message" />
                     )}
                 </FormItem>
-                <FormItem {...formItemLayout} label="Image" >
+                <FormItem
+                    {...formItemLayout}
+                    label="Image"
+                >
                     <div className="dropbox">
                         {getFieldDecorator('image', {
                             valuePropName: 'fileList',

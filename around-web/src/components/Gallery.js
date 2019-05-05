@@ -15,6 +15,7 @@ export class Gallery extends Component {
             })
         ).isRequired
     }
+
     render() {
         const images = this.props.images.map((image) => {
             return {
@@ -37,6 +38,8 @@ export class Gallery extends Component {
         );
     }
 }
+
+
 const wrapperStyle = {
     display: "block",
     minHeight: "1px",

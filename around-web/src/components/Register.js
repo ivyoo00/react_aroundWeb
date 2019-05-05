@@ -27,8 +27,7 @@ class RegistrationForm extends React.Component {
                         return response;
                     }
                     throw new Error(response.statusText);
-                })
-                    .then((response) => response.text())
+                }).then((response) => response.text())
                     .then((response) => {
                         console.log(response);
                         message.success('Registration Succeed');
@@ -41,6 +40,7 @@ class RegistrationForm extends React.Component {
             }
         });
     }
+
     handleConfirmBlur = (e) => {
         const value = e.target.value;
         this.setState({ confirmDirty: this.state.confirmDirty || !!value });
@@ -65,7 +65,6 @@ class RegistrationForm extends React.Component {
 
     render() {
         const { getFieldDecorator } = this.props.form;
-
         const formItemLayout = {
             labelCol: {
                 xs: { span: 24 },
@@ -131,7 +130,7 @@ class RegistrationForm extends React.Component {
                 </FormItem>
                 <FormItem {...tailFormItemLayout}>
                     <Button type="primary" htmlType="submit">Register</Button>
-                    <p>I already have an account, go back to <Link to="/Login">login</Link></p>
+                    <p>I already have an account, go back to <Link to="/login">login</Link></p>
                 </FormItem>
             </Form>
         );
